@@ -1,0 +1,27 @@
+BACKE END 
+intinya => request sama respons
+
+javascript ga bsa d baca sm komputer'
+javascript cm bsa d baca d browser, nama engine v8
+gimana cara js bsa kebaca k mesin/komputer kita?
+NODEJS jawabannya, yg menerjemahkan javascript k mesin kita
+
+node js ada ekosistem npm, npm inialah yga buat javascript powerful/bsa d jalankan dmn2
+
+synchronus vs asyncronus
+blocking vs Non-blocking
+
+Synchronus/blocking => 
+    berurut/sesuai urutan, 
+    task 1 harus selesai smpe bnr2 selesai baru task kedua dn slnjutnya d kerjakan, 
+    urutan 1 d kerajain smpe beres dlu, kaya FIFO
+Asynchronus/non-blocking => 
+    ga berurutan/tidak harus selesai task pertamanya, 
+    bsa ngerjain task slanjutnya walaupun task pertama blm sepunhnya selsai, 
+    lebih efisien
+
+cara import ddlm js
+
+
+
+
