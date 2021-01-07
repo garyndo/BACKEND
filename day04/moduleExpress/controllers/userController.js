@@ -38,13 +38,20 @@ module.exports = {
     register: (req,res)=>{
         // const {username, password, email} = req.body
         let errors = validationResult(req)
+        console.log(errors)
+        console.log(errors.array())
+
+        //mengambil msg error dari exporees-validator
+        const msg = errors.array().map(
+            (item) => item.msg
+        )
+        console.log(msg)
         
         if (!errors.isEmpty()) {
-            return res.status(400).send({ errors : errors.array()});
+            return res.status(400).send(msg);
         }
 
         database.push(req.body)
-    
         res.status(200).send(database)
     },
     edit:  (req, res)=>{
