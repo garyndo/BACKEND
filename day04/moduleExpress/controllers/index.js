@@ -1,4 +1,4 @@
-//impoert controller yg d butuhkan
+//import controller yg d butuhkan
 const user = require('./userController')
 const product = require('./productController')
 
