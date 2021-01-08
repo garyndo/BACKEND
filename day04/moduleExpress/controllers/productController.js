@@ -34,13 +34,16 @@ module.exports = {
     },
     edit:  (req, res)=>{
         //ambil data dari product yang mau d edit
-        let tempUser = dbproducts[+req.params.id]
+        let tempProd = dbproducts[+req.params.id]
         
+        // proteksi! cek ketersediaan produk yg ingin d edit
+        if(!temProd) return res.status(400).send(`product dengan index ${id} tidak d temukan`)
+
         //looping untuk mengesit data user
         for(let key in req.body){
-            for(let key2 in tempUser){
+            for(let key2 in tempProd){
                 if(key == key2){
-                    tempUser[key2] = req.body[key]
+                    tempProd[key2] = req.body[key]
                 }
             }
         }
@@ -48,9 +51,9 @@ module.exports = {
         res.status(200).send(dbproducts)
     },
     delete:(req, res)=>{
-        let tempUser = dbproducts[parseInt(req.params.id)]
+        let tempProd = dbproducts[parseInt(req.params.id)]
     
-        if(!tempUser) return res.status(400).send(`nope ${req.params.id}`)
+        if(!tempProd) return res.status(400).send(`product dengan index ${req.params.id} tidak d temukan`)
     
         dbproducts.splice(parseInt(req.params.id), 1)
         res.status(200).send(dbproducts)
