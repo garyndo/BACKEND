@@ -2,12 +2,12 @@
 let dbproducts = [
     {
         id: 1,
-        name: '"nike-01"',
+        name: "nike-01",
         price: 2000
     },
     {
         id: 2,
-        name: '"nike-02"',
+        name: "nike-02",
         price: 3000
     }
 ]
@@ -17,6 +17,16 @@ let dbproducts = [
 module.exports = {
     getProducts: (req,res)=>{
         res.status(200).send(dbproducts)
+    },
+    productbyid: (req,res) => {
+        //ambil data dari params
+        const id = parseInt(req.params.id)
+        //ambil data product sesuai index dari params
+        let temProd = dbproducts[id]
+        //cek apakah tempProduct adaisinya atau tidak
+        if(!temProd) return res.status(400).send('produk tidak ada')
+        
+        res.status(200).send(temProd)
     },
     add: (req,res)=>{
         dbproducts.push(req.body)
