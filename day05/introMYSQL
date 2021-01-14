@@ -1,0 +1,12 @@
+non RDBMS = tiap table tidak ada hubgnna
+
+RDBMS = 
+SQL = bukan aplikasi, tapi nama bahasa pemrograman utk database
+    - standard sql command SELECT INSERT UPDATE DELETE CREATE DROP
+    - MySQL = yg buat oracle coorporation
+        - d tulis dgn C dan C++
+        - Primary key = untuk membdakan 1 data dengan yg lain co => no ktp, product key atau id, id sidikjari
+        - Foreign key
+
+
+CREATE database 
