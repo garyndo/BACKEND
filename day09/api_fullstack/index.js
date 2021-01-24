@@ -40,4 +40,6 @@ app.listen(PORT,()=> console.log(`connceted to PORT: ${PORT}`))
 //NOTE
 // untuk menyambungkan table yg ada d database, buat controller dan routenya
 // misal kita mau ambil data table product dr mysql kita buat dh tu productcontroller sm productrouter
+//NOTE HELPERS
+// Tools untuk mmbuat function pembantu, dalam case ini untuk funciotn edit d user controllers
 
