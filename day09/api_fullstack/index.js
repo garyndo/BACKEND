@@ -27,8 +27,9 @@ app.get('/', (req, res) => {
 })
 
 //15) import router
-const {productRouter} = require('./routers')
+const {productRouter, userRouter} = require('./routers')
 app.use('/product', productRouter)
+app.use('/user', userRouter)
 
 //5) kita masukan k dalamlocalhost/hosting
 const PORT = 2000
