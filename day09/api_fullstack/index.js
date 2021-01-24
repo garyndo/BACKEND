@@ -1,11 +1,11 @@
 // BUAT API NIH BOY
-// SET UP DLU NPM INIT, NPM I EXPRESS BODYPARSER SAMA CONST D CMD/TERMINAL
+// SET UP DLU NPM INIT, NPM I EXPRESS BODYPARSER SAMA CORS D CMD/TERMINAL
 //1)setup/import modul
 const express = require('express') // pebuat server pengganti httpmodul
 const bodyParser = require('body-parser') // unutk menampung req.body request on body, 
 const cors = require('cors') // izin sharing data, API ini bisa d akses sm localhost apapun yg kita buat
 //8)import modul sql
-const mysql = require('mysql') // utk menyambung API dgn mySQL db
+const mysql = require('mysql') // MODUL utk menyambung API dgn mySQL db
 //2) create app
 const app = express()
 
@@ -34,6 +34,9 @@ app.use('/product', productRouter)
 const PORT = 2000
 app.listen(PORT,()=> console.log(`connceted to PORT: ${PORT}`))
  //6) cek menggunakan nodemon d terminal, nodemon berguna utk auto running file
- 
  //7) buat modul sql yg menghubungkan API kita dengan mySQL
+
+//NOTE
+// untuk menyambungkan table yg ada d database, buat controller dan routenya
+// misal kita mau ambil data table product dr mysql kita buat dh tu productcontroller sm productrouter
 
